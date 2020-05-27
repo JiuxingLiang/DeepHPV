@@ -1,0 +1,2 @@
+VISDB_Test_pos_Quantity,VISDB_Test_neg_Quantity,Test_acc,rocauc_score,AveragePrecision_score
+4656,9313,0.7358436538048536,0.6102184762422406,0.5577651027800243

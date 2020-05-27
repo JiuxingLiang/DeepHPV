@@ -1,15 +1,40 @@
-DeepHPV was designed for detection of HPV virus in DNA integration by deep learning. The data provided here is for the model of DeepHPV with HPV integration sequences + TCGA Pan Cancer.
+±¾Ä£ĞÍÊ¹ÓÃµÄÆ½Ì¨£º
+python==3.7
+tensorflow==1.13.1
+keras==2.2.4
 
-Run â€˜Data_Process.pyâ€™ to get one-hot encoding test data and labels.
-Run â€˜DeepHPV-Test.pyâ€™ to detect DNA sequence of HPV virus.
+±¾ÑĞ¾¿Ìá¹©Á½ÖÖ²âÊÔÊı¾İ£¬·Ö³ÉÁ©¸öÎÄ¼ş¼Ğ½øĞĞ²âÊÔ£º
+1£¬²ÉÓÃTCGS-Pan-Cancer TCAG½øĞĞÌØÕ÷É¸Ñ¡£º
+              DeepHPV_with_HPV_integration_sequences+Cancer
+2£¬²ÉÓÃrepeat½øĞĞÌØÕ÷É¸Ñ¡£º
+              DeepHPV_with_HPV_integration_sequences+reprat
 
-Framework:
-DeepHPV framework model contains input layer, 1st convolution1D layer, 2nd convolution1D layer, max pooling layer, 1st dropout layer, 2nd dropout layer, attention layer, 1st dense layer (fully connected layer), 2nd dense layer, concatenate layer, classifier layer.
+ÔÚÒÔÉÏÁ©¸öÎÄ¼ş¼ĞÖĞ£¬Ã¿¸öÎÄ¼ş¼ĞÄÚ¾ù°üº¬HPVdata£¬Model£¬test_resultÈı¸ö×ÓÎÄ¼ş¼Ğ£¬ÒÔ¼°Data_process.pyºÍDeepHPV_Test.pyÁ©¸ö×ÓÎÄ¼ş
+1£¬HPVdata£º´æ·Å×Å²âÊÔÊı¾İ£¬Êı¾İÀàĞÍÎªmat¸ñÊ½
+2£¬Model£º´æ·Å×ÅÒÑÑµÁ·Íê±ÏµÄÉñ¾­ÍøÂçÄ£ĞÍ
+3£¬test_result£º´æ·Å×ÅÉñ¾­ÍøÂçÊı¾İ²âÊÔµÄ½á¹û
+4£¬Data_process.py£º¸ÃÎÄ¼ş½«¶ÔHPVdataÎÄ¼ş¼ĞÖĞµÄÊı¾İ½øĞĞone_hot±àÂë²Ù×÷£¬¸ÃÎÄ¼şĞèÏÈÔËĞĞ
+5£¬DeepHPV_Test.py£ºÄ£ĞÍ²âÊÔ³ÌĞò£¬½«ÀûÓÃÒÑÑµÁ·ºÃµÄÉñ¾­ÍøÂçÄ£ĞÍ¶ÔÊı¾İ½øĞĞ²âÊÔ£¬½ø¶ø½«²âÊÔ½á¹û´æ·Å½øtest_resultÎÄ¼ş¼ĞÖĞ
 
-Dependency:
-Keras library 2.2.4. 
-scikit-learn 0.22. 
 
-If you have any questions, please contact me.
 
-Email: liangjiuxing@m.scnu.edu.cn
+The platform used by this model:
+python == 3.7
+tensorflow == 1.13.1
+keras == 2.2.4
+
+This research provides two kinds of test data, which are divided into two folders for testing:
+1.  Us TCGS-Pan-Cancer TCAG for feature screening:
+            DeepHPV_with_HPV_integration_sequences + Cancer
+2. Use repeat for feature screening:
+            DeepHPV_with_HPV_integration_sequences + reprat
+
+In the above two folders, each folder contains three subfolders HPVdata, Model, test_result, and two subfiles Data_process.py and DeepHPV_Test.py
+1, HPVdata: store test data, the data type is mat format
+2. Model: stores the trained neural network model
+3. test_result: stores the results of neural network data testing
+4. Data_process.py: This file will perform one_hot encoding operation on the data in the HPVdata folder, this file needs to be run first
+5. DeepHPV_Test.py: model test program, will use the trained neural network model to test the data, and then store the test results in the test_result folder
+
+
+
