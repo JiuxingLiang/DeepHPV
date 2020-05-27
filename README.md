@@ -1,4 +1,4 @@
-DeepHPV was designed for detection of HPV virus in DNA integration by deep learning.
+DeepHPV was designed for detection of HPV virus in DNA integration by deep learning. The data provided here is for the model of DeepHPV with HPV integration sequences + TCGA Pan Cancer.
 
 Run ‘Data_Process.py’ to get one-hot encoding test data and labels.
 Run ‘DeepHPV-Test.py’ to detect DNA sequence of HPV virus.
